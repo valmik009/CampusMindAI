@@ -1,0 +1,51 @@
+{
+  "name": "campusmind-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Build an MCP server called CampusMind AI — a persistent academic memory system for students. It should remember what a student has studied…",
+  "scripts": {
+    "dev": "nitrostack-cli dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "nitrostack-cli build",
+    "build:frontend": "next build frontend",
+    "start": "node dist/index.js",
+    "start:prod": "node dist/index.js",
+    "upgrade": "nitrostack-cli upgrade",
+    "install:all": "nitrostack-cli install",
+    "widget": "npm --prefix src/widgets",
+    "frontend:dev": "next dev frontend",
+    "frontend:build": "next build frontend",
+    "frontend:start": "npm start",
+    "dev:all": "concurrently --kill-others \"npm start\" \"npm run frontend:dev\""
+  },
+  "dependencies": {
+    "@nitrostack/core": "^1.0.13",
+    "clsx": "^2.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.21.2",
+    "framer-motion": "^11.18.2",
+    "lucide-react": "^0.400.0",
+    "next": "^14.2.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tailwind-merge": "^2.3.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@nitrostack/cli": "^1.0.14",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^10.0.4",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.3.3"
+  },
+  "author": "NitroStudio",
+  "nitrostack": {
+    "skillsVersion": "1.0.0"
+  }
+}
